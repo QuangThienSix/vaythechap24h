@@ -1,0 +1,378 @@
+extends ./partial/layout.pug
+block variables
+	- var title = 'Vay vốn thế chấp'
+	- var description = 'VAY THẾ CHẤP SỔ ĐỎ, SỔ HỒNG - VAY MUA - SỬA NHÀ - VAY TIÊU DÙNG THẾ CHẤP'
+	- var bodyclass = 'home'
+block content
+	//- Bạn viết code vào đây nhớ là phải mở đầu bằng section ở mỗi khối
+	section.home-slider
+		.owl-carousel.owl-theme
+			.item
+				img(src="/img/hs3.png", alt="")
+				.title
+					.container
+						.row
+							.col-md-8
+								h2 VAY TIÊU DÙNG
+								p Vay tiêu dùng thế chấp đáp ứng mọi nhu cầu chi tiêu, mua sắm mà không cần phải chờ đợi tiết kiệm đủ tiền.
+			.item
+				img(src="/img/hs2.png", alt="")
+				.title
+					.container
+						.row
+							.col-md-8
+								h2 VAY ĐẦU TƯ DỰ ÁN BẤT ĐỘNG SẢN
+								p Là sản phẩm vay trung dài hạn đáp ứng nhu cầu vốn đầu tư các dự án bất động sản để kinh doanh.
+			.item
+				img(src="/img/hs1.png", alt="")
+				.title
+					.container
+						.row
+							.col-md-8
+								h2 VAY VỐN KINH DOANH
+								p Đừng bỏ qua cơ hội mở rộng quy mô sản xuất, kinh doanh với khoản vay thế chấp ngân hàng lãi suất “siêu” ưu đãi.
+	//- Khối Thông TIn
+	section.home-form#home-form
+		.home-form-bg-img
+		.container
+			.row.text-center.content-phone
+				.col-md-6.content-phone-left
+					.logo
+						.img
+							img(src="/img/logo2.png", alt="Nam Á")
+
+				.col-md-6.content-phone-right
+					.phone
+						a(href="tel:0937125126") 
+							i.fa.fa-phone(aria-hidden='true') 
+								span Hotline: 0937125126
+			.row.content-form
+				.col-md-6.content-form-left
+					h3 HỖ TRỢ
+					h1 VAY THẾ CHẤP NGÂN HÀNG
+					h4 UY TÍN - NHANH CHÓNG
+					p Ngân Hàng uy tín nhất năm 2020 
+						br 
+						| Giải ngân nhanh - Lãi suất ưu đãi chỉ từ 0.7%/tháng 
+						br
+						| Hỗ trợ vay từ 200 triệu lên đến 12 Tỷ Đồng 
+						br
+						| Thời gian vay lên đến 30 năm 
+						br
+						| Hỗ trợ vay lên tới 85% giá trị tài sản
+						br
+						| Giải ngân nhanh 3 ngày đến 5 ngày
+						br
+						| Nợ xấu vẫn hỗ trợ
+						br
+						| Diện tích nhỏ <15m
+						sup 2 
+						| Hẻm 1m
+				.col-md-6.content-form-right
+					.dangkyform
+						.dangnhap
+							form#dangnhap-form.dangnhap-form(action="/" method="POST" name="dangnhap-form" onsubmit="return KiemTra()")
+								h2.text-center ĐĂNG KÝ TƯ VẤN
+								h5.text-center TƯ VẤN MIỄN PHÍ CHO MỌI VẤN ĐỀ CỦA BẠN
+								h6.text-danger(class=".mb-0")
+								//- // username
+								.txtbox
+									input#username1(type="text" name="username1")
+									span(data-placeolder="Họ và tên")
+								//- // password
+								.txtbox
+									input#sdt1(type="text" name="sdt1")
+									span(data-placeolder="Số điện thoại")
+								.txtbox
+									input#email1(type="text" name="email1")
+									span(data-placeolder="Email")
+								.txtbox
+									input#note1(type="textarea" name="note1")
+									span(data-placeolder="Bạn đang cần vay bao nhiêu")
+								//- // submit
+								input.dnbtn.submit1(type="submit" value="Đăng Ký Ngay")
+	//- Khối Thông TIn
+	section.home-banner
+		.container
+			.row
+				.col-md-6.content-banner
+					h2.top ĐIỀU GÌ LÀM BẠN BĂN KHOĂN???
+					h6 Khi bạn có nhu cầu vay 1 khoản tiền lớn có Thế Chấp Tài Sản, tâm lý bạn thường sẽ có nhiều nỗi băn khoăn:
+						br
+						| - Không biết vay ở đâu nhanh ? 
+						br
+						| - Thủ tục như thế nào - có phức tạp không ? 
+						br
+						| - Không biết điều kiện của mình có vay được không ?
+						br
+						| - Lãi suất có cao không?
+						br
+						| - Sợ vay nhầm Dịch vụ, Vay Nóng, lãi suất cao...???
+						br
+						| - Có chứng minh thu nhập gì không?
+						h2.bottom ĐỪNG LO LẮNG >>>
+							br
+							| ĐẾN VỚI CHÚNG TÔI:
+						p Chúng tôi sẽ hỗ trợ bạn để có được khoản vay tốt nhất !
+					.content-left
+						h5 Lãi suất ưu đãi - Thanh toán linh hoạt
+						.row(style="margin:10px 0")
+							.col-md-2(style="margin:auto")
+								.img.text-center
+									img(src="/img/tick-icon.png", alt="Lãi suất ưu đãi - Thanh toán linh hoạt")
+							.col-md-10(style="padding-left:0")
+								.title
+									p Lãi suất từ 0.7%/tháng tùy vào từng gói vay mà Khách hàng lựa chọn. Có thể thanh toán linh hoạt: trả lãi 12 tháng hoặc trả góp lên đến 30 năm. Tất toán trước hạn bất cứ lúc nào.
+					.content-left
+						h5 Phê duyệt khoản vay cao
+						.row(style="margin:10px 0")
+							.col-md-2(style="margin:auto")
+								.img.text-center
+									img(src="/img/tick-icon.png", alt="Phê duyệt khoản vay cao")
+							.col-md-10(style="padding-left:0")
+								.title
+									p Hỗ trợ vay lên đến 85% giá trị Tài Sản. Đáp ứng từ 200 triệu đến 10 tỷ đồng, phục vụ đúng nhu cầu Khách hàng.
+					.content-left
+						h5 Thủ tục đơn giản - Giải ngân nhanh chóng
+						.row(style="margin:10px 0")
+							.col-md-2(style="margin:auto")
+								.img.text-center
+									img(src="/img/tick-icon.png", alt="Thủ tục đơn giản - Giải ngân nhanh chóng")
+							.col-md-10(style="padding-left:0")
+								.title
+									p Giải ngân chỉ từ 3 ngày làm việc. Nhanh chóng - Chuyên nghiệp. Hỗ trợ chứng minh thu nhập cho Khách hàng. Hỗ trợ phương án vay vốn. Có dịch vụ bao trọn gói hồ sơ vay cho khách.
+				.col-md-6.img-banner
+					.img
+						img(src="/img/banner1.png", alt="Vay tiêu dùng")
+					.title.text-center
+						h6 Tư vấn vay miễn phí
+							br
+							| 0937 125 126
+	//- Item
+	section.home-item#home-item
+		.container
+			.row.text-center
+				.col
+					h2 LÝ DO BẠN NÊN 
+						span VAY THẾ CHẤP NGÂN HÀNG
+			.row.mb-3
+				.col-md-4
+					.item.text-center
+						.img
+							img(src="/img/item1.jpg", alt="Lãi suất")
+						.title
+							h3 Lãi suất
+							p Lãi suất 
+								span vay thế chấp 
+								| cực ưu đãi
+				.col-md-4
+					.item.text-center
+						.img
+							img(src="/img/item2.jpg", alt="Hạn mức cho vay")
+						.title
+							h3 Hạn mức cho vay
+							p Hạn mức vay thế chấp cao, lên đến 
+								span tối đa 85% 
+								| giá trị tài sản đảm bảo.
+				.col-md-4
+					.item.text-center
+						.img
+							img(src="/img/item3.jpg", alt="Tài sản đảm bảo")
+						.title
+							h3 Tài sản đảm bảo
+							p Tài sản đảm bảo linh hoạt, có thể là 
+								span sổ đỏ, sổ hồng, xe hơi hoặc các giấy tờ 
+								| có giá khác.
+			.row
+				.col-md-4
+					.item.text-center
+						.img
+							img(src="/img/item4.jpg", alt="Phương thức trả nợ")
+						.title
+							h3 Phương thức trả nợ
+							p Hình thức trả nợ linh hoạt, gốc và lãi 
+								span trả góp hàng tháng, hàng quý.
+				.col-md-4
+					.item.text-center
+						.img
+							img(src="/img/item5.jpg", alt="Thời gian cho vay")
+						.title
+							h3 Thời gian cho vay
+							p Thời hạn cho vay thế chấp dài, tối đa lên đến 
+								span 30 năm
+								| , giúp giảm áp lực trả nợ.
+				.col-md-4
+					.item.text-center
+						.img
+							img(src="/img/item1.jpg", alt="Đội ngũ tư vấn")
+						.title
+							h3 Đội ngũ tư vấn
+							p Khách hàng sẽ được tư vấn bởi đội ngũ nhân viên 
+								span tận tâm và giàu kinh nghiệm.
+	//- Product
+	section.home-product#home-product
+		.container
+			.row.text-center.head
+				.col
+					h2 CÁC SẢN PHẨM VAY VỐN
+					p Tùy theo nhu cầu và mục đích sử dụng vốn mà quý khách có thể chọn cho mình hình thức Vay Thế Chấp phù hợp nhất
+			.row.mb-5.row1
+				.col-md-6.product-content
+					h3 VAY THẾ CHẤP SỔ ĐỎ, SỔ HỒNG
+					p.title-p Là Sản phẩm vay đa dạng với nhiều phương án vay: Vay Mua Nhà Đất, Vay Sửa chữa, Vay Tiêu Dùng, Vay Kinh doanh. VIB hỗ trợ đối với đất thổ cư, diện tích > 20m2.
+					.title
+						h6 Số tiền vay: Tối đa 85% giá trị tài sản.
+						p ✔️ Thời gian vay: Tối đa 30 năm
+							br
+							| ✔️ Lãi suất: chỉ từ 0.7%/tháng&nbsp;
+							br
+							| ✔️ Đối tượng: Cá nhân
+							br
+							| ✔️ Mục đích vay: Vay Mua Nhà Đất BĐS, Vay sửa chữa, Vay Tiêu dùng, Vay Kinh Doanh có TSBĐ...
+							br
+							| ✔️ Điều kiện và thủ tục đơn giản
+							br
+							| ✔️ Giải ngân nhanh chỉ từ 3 ngày làm việc
+						h6 ĐẶC BIỆT:
+						p(style="margin: 0 0 5px 0") ⛔️ Hỗ trợ Chứng minh thu nhập cho Khách hàng
+						p(style="margin: 0") ⛔️ Dịch vụ bao trọn gói hồ sơ vay cho Khách hàng
+				.col-md-6.product-baner
+					.img
+						img(src="/img/banner2.jpg", alt="SỔ ĐỎ, SỔ HỒNG")
+						.bigo
+			.row.row2.mb-5
+				.col-md-6.product-baner
+					.img
+						img(src="/img/banner3.jpg", alt="VAY MUA - SỬA NHÀ")
+						.bigo
+				.col-md-6.product-content
+					h3 VAY MUA - SỬA NHÀ
+					p.title-p Là Sản phẩm vay Sửa chữa nhà. Thời gian vay tối đa: 15 năm
+					.title
+						h6 Số tiền vay: Tối đa 85% giá trị tài sản.
+						p ✔️ Thời gian vay: Tối đa 30 năm
+							br
+							| ✔️ Lãi suất: chỉ từ 0.7%/tháng&nbsp;
+							br
+							| ✔️ Đối tượng: Cá nhân
+							br
+							| ✔️ Mục đích vay: Vay Mua Nhà Đất BĐS, Vay sửa chữa, Vay Tiêu dùng, Vay Kinh Doanh có TSBĐ...
+							br
+							| ✔️ Điều kiện và thủ tục đơn giản
+							br
+							| ✔️ Giải ngân nhanh chỉ từ 3 ngày làm việc
+						h6 ĐẶC BIỆT:
+						p(style="margin: 0 0 5px 0") ⛔️ Hỗ trợ Chứng minh thu nhập cho Khách hàng
+						p(style="margin: 0") ⛔️ Dịch vụ bao trọn gói hồ sơ vay cho Khách hàng
+			.row.row1.mb-5
+				.col-md-6.product-content
+					h3 VAY TIÊU DÙNG THẾ CHẤP
+					p.title-p Vay tiêu dùng thế chấp đáp ứng mọi nhu cầu chi tiêu, mua sắm mà không cần phải chờ đợi tiết kiệm đủ tiền.
+					.title
+						h6 Số tiền vay: Tối đa 85% giá trị tài sản.
+						p ✔️ Thời gian vay: Tối đa 30 năm
+							br
+							| ✔️ Lãi suất: chỉ từ 0.7%/tháng&nbsp;
+							br
+							| ✔️ Đối tượng: Cá nhân
+							br
+							| ✔️ Mục đích vay: Vay Mua Nhà Đất BĐS, Vay sửa chữa, Vay Tiêu dùng, Vay Kinh Doanh có TSBĐ...
+							br
+							| ✔️ Điều kiện và thủ tục đơn giản
+							br
+							| ✔️ Giải ngân nhanh chỉ từ 3 ngày làm việc
+						h6 ĐẶC BIỆT:
+						p(style="margin: 0 0 5px 0") ⛔️ Hỗ trợ Chứng minh thu nhập cho Khách hàng
+						p(style="margin: 0") ⛔️ Dịch vụ bao trọn gói hồ sơ vay cho Khách hàng
+				.col-md-6.product-baner
+					.img
+						img(src="/img/banner4.jpg", alt="VAY TIÊU DÙNG THẾ CHẤP")
+						.bigo
+			.row.row2.mb-5
+				.col-md-6.product-baner
+					.img
+						img(src="/img/banner5.jpg", alt="VAY MUA XE Ô TÔ")
+						.bigo
+				.col-md-6.product-content
+					h3 VAY MUA XE Ô TÔ
+					p.title-p Bạn muốn sở hữu một chiếc ô tô riêng để thuận đi lại cho mình và gia đình. VIB hỗ trợ bạn sở hữu chiếc xe mong ước chỉ từ 48h làm việc và lãi suất ưu đãi nhất.
+					.title
+						h6 Số tiền vay: Tối đa 85% giá trị xe.
+						p ✔️ Thời gian vay: Tối đa 30 năm
+							br
+							| ✔️ Lãi suất: chỉ từ 0.7%/tháng&nbsp;
+							br
+							| ✔️ Đối tượng: Cá nhân
+							br
+							| ✔️ Mục đích vay: Vay Mua Nhà Đất BĐS, Vay sửa chữa, Vay Tiêu dùng, Vay Kinh Doanh có TSBĐ...
+							br
+							| ✔️ Điều kiện và thủ tục đơn giản
+							br
+							| ✔️ Giải ngân nhanh chỉ từ 3 ngày làm việc
+						h6 ĐẶC BIỆT:
+						p(style="margin: 0 0 5px 0") ⛔️ Hỗ trợ Chứng minh thu nhập cho Khách hàng
+						p(style="margin: 0") ⛔️ Dịch vụ bao trọn gói hồ sơ vay cho Khách hàng
+	//- Home Form 2
+	section.home-form-2
+		.container
+			.row.text-center
+				.col
+					h2 YÊU CẦU TƯ VẤN MIỄN PHÍ
+					p Hàng chục nghìn khách hàng đã đăng ký tư vấn các sản phẩm vay vốn thế chấp ngân hàng. Hãy nhanh tay đăng ký hoặc gọi ngay qua 0937.125.126 để trở thành người tiếp theo được chúng tôi hỗ trợ các giải pháp tài chính hiệu quả nhất.
+			.row.text-center.form
+				.col
+					h3 Hãy để lại SĐT, nhân viên chúng tôi sẽ gọi lại tư vấn cho bạn ngay nhé!
+					button.btn.btn-danger.sbf(type='button' data-toggle='modal' data-target='#exampleModal')
+						| ĐĂNG KÝ NGAY
+					//- // Modal
+					#exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+						.modal-dialog(role='document')
+							.modal-content
+								.modal-header
+									h5#exampleModalLabel.modal-title ĐĂNG KÝ TƯ VẤN
+									button.close(type='button' data-dismiss='modal' aria-label='Close')
+									span(aria-hidden='true') &times;
+								.modal-body
+									.dangkyform
+										.dangnhap
+											form#dangnhap-form.dangnhap-form(action="/" method="POST" name="dangnhap-form" onsubmit="return KiemTra2()")
+												.row
+													.col-md-6
+														.txtbox
+															input#username2(type="text" name="username2")
+															span(data-placeolder="Họ và tên")
+													.col-md-6
+														.txtbox
+															input#email2(type="text" name="email2")
+															span(data-placeolder="Email")
+												.row
+													.col
+														.txtbox
+															input#sdt2(type="text" name="sdt2")
+															span(data-placeolder="Số điện thoại")
+												.row
+													.col
+														.txtbox
+															input#note2(type="textarea" name="note2")
+															span(data-placeolder="Để lại lời nhắc với chúng tôi!")
+												//- .row
+												//- 	.col
+												//- 		//- // submit
+												//- 		input.dnbtn(type="submit" value="Đăng Ký Ngay")
+												.modal-footer
+													input.dnbtn.submit2(type="submit" value="Đăng Ký Ngay")
+													button.btn.btn-secondary(type='button' data-dismiss='modal') Đóng
+	//- contact
+	
+
+	//- section.home-clients.mt-5
+	//- 	.container
+	//- 		.row
+	//- 			.col
+	//- 				.owl-carousel.owl-theme
+	//- 					- for(x=1;x<10;x++)
+	//- 						.item
+	//- 							if (x < 7)
+	//- 								img(src="/img/clients_"+x+".png", alt="")
+	//- 							else
+	//- 								img(src="/img/clients_"+(x-3)+".png", alt="")

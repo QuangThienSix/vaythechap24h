@@ -1,0 +1,26 @@
+{
+    "mysql": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "1M-fk)3D%2+)-{}]",
+        "database": "nama_db",
+        "connectionLimit": 50
+    },
+    "pagination": {
+        "limit": 6
+    },
+    "authentication": {
+        "saltRounds": 8
+    },
+    "email": {
+        "email_send": "phamquangthien.it@gmail.com",
+        "email_receive": "tranthuc91gl@gmail.com"
+    },
+    "Mail": {
+        "Gmail_USER": "phamquangthien.it@gmail.com",
+        "Gmail_PASS": "pbwzanxeyonhugbc"
+
+    }
+
+}

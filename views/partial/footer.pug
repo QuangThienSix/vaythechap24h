@@ -1,0 +1,66 @@
+<!-- ////////////// FOOTER ////////////// -->
+footer.border-top
+	section.home-contact#home-contact
+		.container(style="padding: 30px 15px")
+			.row.text-center.head
+				.col
+					h2 Liên hệ với chúng tôi
+					p Hãy gọi ngay cho chúng tôi theo Hotline bên dưới hoặc để lại thông tin, Nhân viên tư vấn của chúng tôi sẽ liên hệ và tư vấn ngay cho bạn
+			.row
+				.col-md-4
+					.contact-about
+						.address
+							i.fa.fa-map-marker(aria-hidden='true')  Địa điểm
+							p 111A paster, Pường bến nghé, Quận 1, Tp Hồ Chí Minh
+					.contact-about
+						.phone
+							i.fa.fa-phone(aria-hidden='true')  Số điện thoại
+							p 0937.125.126 - 0979.758.253
+					.contact-about
+						.mail
+							i.fa.fa-envelope(aria-hidden='true')  Thư
+							p tranthuc91gl@gmail.com
+					.row
+						.col
+							.item-icon
+								ul
+									li
+										a(href="https://www.facebook.com/rio.ken.967" target="_blank")
+											i.fa.fa-facebook-square(aria-hidden='true')
+									li
+										a(href="mailto:tranthuc91gl@gmail.com")
+											i.fa.fa-envelope(aria-hidden='true')
+				.col-md-8.content-form-right
+					.dangkyform
+							.dangnhap
+								form#dangnhap-form.dangnhap-form(action="/" method="POST" name="dangnhap-form3" onsubmit="return KiemTra3()")
+									.row
+										.col-md-6
+											.txtbox
+												input#username3(type="text" name="username3")
+												span(data-placeolder="Họ và tên")
+										.col-md-6
+											.txtbox
+												input#email3(type="text" name="email3")
+												span(data-placeolder="Email")
+									.row
+										.col
+											.txtbox
+												input#sdt3(type="text" name="sdt3")
+												span(data-placeolder="Số điện thoại")
+									.row
+										.col
+											.txtbox
+												input#note3(type="textarea" name="note3")
+												span(data-placeolder="Để lại lời nhắc với chúng tôi!")
+									.row
+										.col
+											//- // submit
+											input.dnbtn.submit3(type="submit" value="Đăng Ký Ngay")
+#scroll-top-zalo(style='z-index: 9999; width: 100px; height: 100px; position: fixed; bottom: 10px; right: 10px; text-align: center; border-radius: 50%; opacity: 1;')
+	a(href='https://zalo.me/0937125126' target='_blank' style='font-size: 30px; color: #363698; font-weight: bold; text-decoration: none')
+		img(src='/img/zalo.png' alt='Zalo' style='width: 60px; height: 60px;border-radius: 50%')
+#scroll-top-phone(style='z-index: 9999; width: 100px; height: 100px; position: fixed; bottom: 10px; left: 10px; text-align: center; border-radius: 50%; opacity: 1;')
+	a(href="tel:0937125126" style='font-size: 30px; color: #363698; font-weight: bold; text-decoration: none')
+		img(src='/img/icon-phone.png' alt='Phone' style='width: 80px; height: 80px;border-radius: 50%')
+

@@ -1,0 +1,77 @@
+extends ./partial/layout.pug
+block variables
+	- var title = 'Viết Bài'
+	- var description = 'VAY THẾ CHẤP SỔ ĐỎ, SỔ HỒNG - VAY MUA - SỬA NHÀ - VAY TIÊU DÙNG THẾ CHẤP'
+	- var bodyclass = 'writer'
+
+block content
+	section.writer-pages
+		.container-fluid
+			.row
+				.col-2
+					#v-pills-tab.nav.flex-column.nav-pills(role='tablist' aria-orientation='vertical')
+						a#v-pills-listpost-tab.nav-link.active(data-toggle='pill' href='#v-pills-listpost' role='tab' aria-controls='v-pills-listpost' aria-selected='true') T&#x1EA5;t c&#x1EA3; b&agrave;i vi&#x1EBF;t c&#x1EE7;a b&#x1EA1;n
+						a#v-pills-newpost-tab.nav-link(data-toggle='pill' href='#v-pills-newpost' role='tab' aria-controls='v-pills-newpost' aria-selected='false') Vi&#x1EBF;t b&agrave;i m&#x1EDB;i
+				.col-10
+					#v-pills-tabContent.tab-content
+						#v-pills-listpost.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='v-pills-listpost-tab')
+							form(method='POST')
+								.card
+									.card-header.d-flex.justify-content-between
+										h4 Danh sách bài đăng của bạn
+									table.table.table-hover
+										thead
+											tr
+												th.text-center(scope='col' hidden='') NewsID
+												th.text-center(scope='col') Tiêu Đề
+												th.text-center(scope='col') Ngày Đăng
+												th.text-center(scope='col') Tác Giả
+												th.text-center(scope='col') Nội Dung Tóm Tắt
+												th(scope='col')
+												th(scope='col')
+										tbody
+											tr
+												td(hidden='')
+													input#txtNewsID.form-control(type='text' value='{{NewsID}}' readonly='')
+												td
+												td
+												td
+												td
+												td
+													a.btn.btn-primary.btn-sm(href='/Writer/Edit/{{NewsID}}' role='button')
+														i.fa.fa-pencil-square-o(aria-hidden='true' title="Chỉnh Sửa")
+												td
+													a.btn.btn-success.btn-sm(href='/Writer/AddTag/{{NewsID}}' role='button')
+														i.fa.fa-tags(aria-hidden='true' title='Thêm nhãn')
+						#v-pills-newpost.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-newpost-tab')
+							form(method='post' novalidate='' action='' enctype='multipart/form-data')
+								.card
+									.card-header
+										h4 Thêm bài viết mới
+									.card-body
+										.row
+											.col-9
+												.form-group
+													label(for='txtNewsTitle') Tiêu Đề 
+													input#txtNewsTitle.form-control(name='NewsTitle' type='text')
+												.form-group
+													label(for='txtContent_min') Nội dung ngắn
+													textarea#txtContent_min.form-control(name='Content_min' cols='30' rows='10')
+												.form-group
+													label(for='txtContent') Nội dung chi tiết
+													textarea#txtContent.form-control(name='Content' cols='30' rows='10')
+											.col-3
+												.form-group
+													label(for='txtCatChild') Chuyên mục
+													select#txtCatChild.custom-select(name='CatChild_ID')
+													| 
+													option(value='')
+												.form-group
+													label(for='txtMetaTitle') Meta Tiêu Đề 
+													input#txtMetaTitle.form-control(name='MetaTitle' type='text')
+												.form-group
+													label(for='txtMetaDescription') Meta Description
+													input#txtMetaDescription.form-control(name='MetaDescription' type='text')
+									.card-footer
+										button.btn.btn-lg.btn-success.btn-block(type='submit')
+											i.fa.fa-check(aria-hidden='true') Đăng Bài

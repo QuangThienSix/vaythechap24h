@@ -1,0 +1,70 @@
+script(src="/jquery/jquery.min.js")
+//- script(src="/popper/popper.min.js")
+script(src="/bootstrap/js/bootstrap.min.js")
+script(src="/owl/owl.carousel.min.js")
+script(src="./js/main.js")
+
+
+script(async='' src='https://www.googletagmanager.com/gtag/js?id=G-VWPJP67QLY')
+script.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWPJP67QLY');
+  
+  
+// Global site tag (gtag.js) - Google Analytics
+script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-183951079-1')
+script.
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-183951079-1');
+  gtag('set', {'user_id': '256382623'});
+  
+  
+// Google Tag Manager
+script.
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PQQN66X');
+// End Google Tag Manager
+
+
+
+
+script(src='https://cdn.tiny.cloud/1/a8evu74ycf9krkkbpzef6q3z939l5t1j9wzeiqd8njrz2l1u/tinymce/5/tinymce.min.js' referrerpolicy='origin')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/fileinput.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/themes/fa/theme.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/locales/vi.min.js')
+script.
+  tinymce.init({
+  selector: '#txtContent',
+  content_css: '//www.tiny.cloud/css/codepen.min.css',
+  height: 450,
+  plugins: 'paste image link autolink lists table media code responsivefilemanager',
+  menubar: true,
+  toolbar: [
+  'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright | forecolor backcolor | table link media image',
+  ],
+  images_upload_url: 'postAcceptor.php',
+  automatic_uploads: false,
+  });
+script.
+  tinymce.init({
+  selector: '#txtContent_min',
+  content_css: '//www.tiny.cloud/css/codepen.min.css',
+  height: 450,
+  plugins: 'paste image link autolink lists table media code responsivefilemanager',
+  menubar: true,
+  toolbar: [
+  'undo redo | bold italic underline strikethrough | numlist bullist | alignleft aligncenter alignright | forecolor backcolor | table link media image',
+  ],
+  images_upload_url: 'postAcceptor.php',
+  automatic_uploads: false,
+  });
+  
+  
+  

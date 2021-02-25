@@ -1,0 +1,22 @@
+extends ./partial/layout.pug
+block variables
+	- var title = 'Đăng Nhập'
+	- var description = 'VAY THẾ CHẤP SỔ ĐỎ, SỔ HỒNG - VAY MUA - SỬA NHÀ - VAY TIÊU DÙNG THẾ CHẤP'
+	- var bodyclass = 'home'
+
+block content
+	section.login-pages
+		.dangnhap
+			form#dangnhap-form.dangnhap-form(action="" method="POST" name="dangnhap-form" onsubmit="return KiemTralogin()")
+				h2 Đăng Nhập
+				h6.text-danger(class=".mb-0")
+				// username
+				.txtbox
+					input#username(type="text" name="username")
+					span(data-placeolder="Username")
+				// password
+				.txtbox
+					input#password(type="password" name="password")
+					span(data-placeolder="Password")
+				// submit
+				input.dnbtn(type="submit" value="Đăng Nhập")

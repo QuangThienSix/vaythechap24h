@@ -1,0 +1,40 @@
+{
+    "config": {
+        "SEO": {
+            "AppName": "Vay Thế Chấp",
+            "mobile_color": "#000000",
+            "cfg_name": "HỖ TRỢ VAY THẾ CHẤP NGÂN HÀNG",
+            "cfg_url": "https://vaythechapnganhang24h.vn/",
+            "analytics": "G-WGL1QKB34E",
+            "seo_lang": "en",
+            "seo_geo": "EN",
+            "seo_geo_latitude": "36.204824",
+            "seo_geo_longitude": "138.252924",
+            "app_facebook_ID": "267810567645302",
+            "cfg_description": "Quang Thien Specializing in web design.",
+            "cfg_keywords": "vay thế chấp ngân hàng, vay đầu tư dự án, hạn mức cho vay, vay vốn,vay mua o tô, vay tiêu dùng,vay kinh doanh,vay mua đất, vay sổ đỏ, vay sổ hồng",
+            "cfg_author": "Quang Thien",
+            "cfg_sitenameurl": "6Thien",
+            "app_facebook_adminsID": "267810567645302,267810567645302",
+            "app_appleID": "XXX-XXX-XXX-XXXX",
+            "cfg_sitenameurlgoogle": "https://www.facebook.com/6Thien",
+            "verf_google": "8nU-celY-ho-20iKfBmfgHSQj5FC75aoqWK-SerUYBc",
+            "verf_bing": "F7679394C660249FBA58732D6100A65A",
+            "verf_yandex": "2920774a15b05176",
+            "geography": "93/26 đường số 9 - Phường 16 - Quận gò vấp - Hồ Chí Minh"
+        },
+        "favicondist": "./favicon/",
+        "website": "",
+        "title": "HỖ TRỢ VAY THẾ CHẤP NGÂN HÀNG",
+        "author": {
+            "email": "phamquangthien.it@gmail.com",
+            "name": "Quang Thien",
+            "phone": "0909123144",
+            "link": "https://vaythechapnganhang24h.vn",
+            "coding": "Coding by Quang Thien"
+        },
+        "license": "MIT",
+        "name": "Quang Thien Apps",
+        "version": "1.0"
+    }
+}
