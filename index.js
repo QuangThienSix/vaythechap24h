@@ -115,27 +115,27 @@ var httpsServer = https.createServer(https_options, app);
 
 
 
-httpsServer.listen(443, () => {
-    console.log(`App is running on port ${port}`);
-});
-
-
-
-httpServer.listen(port, () => {
-    console.log(`App is running on port ${port}`);
-});
-
-// var https_port = process.env.PORT_HTTPS || 443;
-// var http_port = process.env.PORT || 80;
-
-// https.createServer(https_options, app).listen(https_port, function() {
-//     console.log('Magic happens on port ' + https_port);
+// httpsServer.listen(443, () => {
+//     console.log(`App is running on port ${port}`);
 // });
 
-// // Redirect from http port to https
-// http.createServer(function(req, res) {
-//     res.writeHead(301, { "Location": "https://" + req.headers['host'].replace(http_port, https_port) + req.url });
-//     console.log("http request, will go to >> ");
-//     console.log("https://" + req.headers['host'].replace(http_port, https_port) + req.url);
-//     res.end();
-// }).listen(http_port);
+
+
+// httpServer.listen(port, () => {
+//     console.log(`App is running on port ${port}`);
+// });
+
+var https_port = process.env.PORT_HTTPS || 443;
+var http_port = process.env.PORT || 80;
+
+https.createServer(https_options, app).listen(https_port, function() {
+    console.log('Magic happens on port ' + https_port);
+});
+
+// Redirect from http port to https
+http.createServer(function(req, res) {
+    res.writeHead(301, { "Location": "https://" + req.headers['host'].replace(http_port, https_port) + req.url });
+    console.log("http request, will go to >> ");
+    console.log("https://" + req.headers['host'].replace(http_port, https_port) + req.url);
+    res.end();
+}).listen(http_port);
